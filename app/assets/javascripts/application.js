@@ -16,4 +16,5 @@
 //= require underscore
 //= require bootstrap
 //= require bootstrap-tour
+//= require jquery-tourbus
 ////= require gmaps/google

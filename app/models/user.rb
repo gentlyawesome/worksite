@@ -8,4 +8,8 @@ class User < ActiveRecord::Base
 	validates_attachment :avatar, :presence => true,
 		  :content_type => { :content_type => "image/jpeg" },
 		    :size => { :in => 0..10.kilobytes }
+     
+        validates :address, presence: true
+        validates :address, length: { minimum: 10 }
+        validates :address, length: { maximum: 500 }
 end
