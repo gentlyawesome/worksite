@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141209144621) do
+ActiveRecord::Schema.define(:version => 20141211143806) do
 
   create_table "users", :force => true do |t|
     t.float    "latitude"
@@ -19,8 +19,12 @@ ActiveRecord::Schema.define(:version => 20141209144621) do
     t.string   "address"
     t.text     "description"
     t.string   "title"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "excel_file_name"
+    t.string   "excel_content_type"
+    t.integer  "excel_file_size"
+    t.datetime "excel_updated_at"
   end
 
 end
