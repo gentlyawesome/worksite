@@ -23,5 +23,5 @@ production:
   encoding: unicode
   database: worksite
   pool: 5
-  username: root
+  username: gilbert1
   password:
