@@ -14,7 +14,7 @@ end
 
 group :production do
   gem 'pg'
-endt
+end
 
 gem 'jquery-rails'
 gem 'geocoder'
