@@ -7,8 +7,7 @@
 
 <div class="col-md-4">
 <%= form_for @user, url: users_path, html: { multipart: true } do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
+  <% if @user.errors.any? %> <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
@@ -73,31 +72,14 @@
   </table>
   </div>
 </div>
-<ol class='tourbus-legs' id='my-tour-id'>
-
-  <li data-orientation='centered'>
-    <h2>This is a modal-like tour leg</h2>
-    <p>It isn't attached to a specific element.</p>
-    <a href='javascript:void(0);' class='tourbus-next'>Next...</a>
-  </li>
-
-  <li data-el='#nav' data-orientation='left' data-width='400'>
-    <h2>Navigation</h2>
-    <p>Here's where I explain how our navigation works...</p>
-    <a href='javascript:void(0);' class='tourbus-next'>Next...</a>
-  </li>
-
-  <li data-el='#sell' data-orientation='bottom' data-width='300'>
-    <p>Buy now, etc, etc</p>
-    <a href='javascript:void(0);' class='tourbus-stop'>Done!</a>
-  </li>
-
-</ol>
+<a href='http://google.com/' data-intro='Hello step one!'></a>
 
 <script type="text/javascript">
 handler = Gmaps.build('Google');
 handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-  markers = handler.addMarkers(<%=raw @hash.to_json %>);
-  handler.bounds.extendWith(markers); handler.fitMapToBounds(); }); 
+markers = handler.addMarkers(<%=raw @hash.to_json %>);
+handler.bounds.extendWith(markers); handler.fitMapToBounds(); }); 
+introJS().start();
+
 
 </script>
