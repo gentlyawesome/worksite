@@ -10,8 +10,6 @@
  *
  *= require_self
  *= require_tree .
- *= require bootstrap
- *= require bootstrap-tour
  *= require introjs
  */
 
