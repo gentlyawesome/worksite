@@ -1,12 +1,11 @@
 class User < ActiveRecord::Base
-	attr_accessible :latitude, :longitude, :address, :description, :title, :excel
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
 
-	geocoded_by :address
-	after_validation :geocode
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation, :remember_me
 
-	has_attached_file :excel
-     
-        validates :address, presence: true
-        validates :address, length: { minimum: 10 }
-        validates :address, length: { maximum: 500 }
+  attr_accessible :first_name, :last_name, :middle_name
 end

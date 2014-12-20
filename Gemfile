@@ -21,3 +21,4 @@ gem 'geocoder'
 gem 'gmaps4rails'
 gem 'bootstrap-tour-rails'
 gem "paperclip", "~> 4.2"
+gem 'devise'

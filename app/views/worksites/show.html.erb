@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @worksite.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @worksite.longitude %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @worksite.address %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @worksite.description %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @worksite.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_worksite_path(@worksite) %> |
+<%= link_to 'Back', worksites_path %>
