@@ -14,7 +14,5 @@
 //= require jquery_ujs
 //= require_tree .
 //= require underscore
-//= require bootstrap
-//= require bootstrap-tour
-//= require jquery-tourbus
+//= require intro 
 ////= require gmaps/google
