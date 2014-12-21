@@ -1,9 +1,9 @@
 class WorksitesController < ApplicationController
-  before_filter :authenticate_user!, :only => [:create, :edit, :destroy]
+  before_filter :authenticate_user!
   # GET /worksites
   # GET /worksites.json
   def index
-    @worksites = Worksite.all
+    @worksites = current_user.worksites
     @worksite = Worksite.new
     @hash = Gmaps4rails.build_markers(@worksites) do |worksite, marker|
       marker.lat worksite.latitude
@@ -41,7 +41,7 @@ class WorksitesController < ApplicationController
 
   # GET /worksites/1/edit
   def edit
-    @worksites = Worksite.all
+    @worksites = current_user.worksites
     @worksite = Worksite.find(params[:id])
     @hash = Gmaps4rails.build_markers(@worksites) do |worksite, marker|
       marker.lat worksite.latitude

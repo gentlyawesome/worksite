@@ -6,39 +6,7 @@
 </div>
 
 <div class="col-md-4">
-<%= form_for(@worksite) do |f| %>
-  <% if @worksite.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@worksite.errors.count, "error") %> prohibited this worksite from being saved:</h2>
-
-      <ul>
-      <% @worksite.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.text_field :latitude, :class => "form-control", :placeholder => "Latitude" %>
-  </div>
-  <div class="field">
-    <%= f.text_field :longitude, :class => "form-control", :placeholder => "Longitude"  %>
-  </div>
-  <div class="field">
-    <%= f.text_field :address, :class => "form-control", :placeholder => "Address"  %>
-  </div>
-  <div class="field">
-    <%= f.text_area :description, :class => "form-control", :rows => 5, :placeholder => "Description"  %>
-  </div>
-  <div class="field">
-    <%= f.text_field :title, :class => "form-control", :placeholder => "Title"  %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Update Worksite", :class => "btn btn-lg btn-block btn-primary" %>
-  </div>
-<% end %>
-
+  <%= render "form" %>
 </div>
 
 <div class="row">

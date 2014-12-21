@@ -5,7 +5,15 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :first_name, :last_name, :middle_name, :password, :password_confirmation, :remember_me, :email
 
-  attr_accessible :first_name, :last_name, :middle_name
+  def full_name
+    [first_name, middle_name, last_name].compact.join(' ')
+  end
+
+  def middle_name_blank
+    "#{middle_name}" unless middle_name.blank? 
+  end
+
+  has_many :worksites
 end

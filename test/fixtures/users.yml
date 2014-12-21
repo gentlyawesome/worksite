@@ -4,8 +4,10 @@ one:
   first_name: MyString
   middle_name: MyString
   last_name: MyString
+  email: test@gmail.com
 
 two:
   first_name: MyString
   middle_name: MyString
   last_name: MyString
+  email: test1@gmail.com
