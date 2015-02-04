@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :first_name, :last_name, :middle_name, :password, :password_confirmation, :remember_me, :email
+  attr_accessible :first_name, :last_name, :middle_name, :password, :password_confirmation, :remember_me, :email, :company_id
 
   def full_name
     [first_name, middle_name, last_name].compact.join(' ')
@@ -16,4 +16,5 @@ class User < ActiveRecord::Base
   end
 
   has_many :worksites
+  belongs_to :company
 end

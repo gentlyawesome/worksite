@@ -12,6 +12,12 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :test, :test do
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'guard-rspec'
+end
+
 group :production do
   gem 'pg'
 end
@@ -23,3 +29,4 @@ gem 'bootstrap-tour-rails'
 gem "paperclip", "~> 4.2"
 gem 'devise'
 gem 'rspec'
+gem 'rspec-rails'
